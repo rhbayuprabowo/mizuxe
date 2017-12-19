@@ -60,12 +60,13 @@ function activateCurrentSection() {
   */
   var lastSection = sections[sections.length-1];  // get last section
   var lastSectionTooSmall = $(lastSection).height() < $(window).height();
+  var lastSectionInView = false;
 
   if (lastSectionTooSmall) {
     var lastSectionTopPos = $(lastSection).offset().top;
     // lastSectionTriggerPos is true if 50% of the last section is visible
     var lastSectionTriggerPos = $(window).height() + $(document).scrollTop() - ($(lastSection).height()/2);
-    var lastSectionInView = lastSectionTriggerPos > lastSectionTopPos;
+    lastSectionInView = lastSectionTriggerPos > lastSectionTopPos;
   }
 
   if (lastSectionTooSmall && lastSectionInView) {
