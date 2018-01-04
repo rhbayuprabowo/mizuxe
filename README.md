@@ -1,6 +1,6 @@
 # Mizuxe
 
-This project is a simple homepage social media app using bootstrap technology.
+This project is a simple landing page using bootstrap technology.
 
 ## Motivation
 
